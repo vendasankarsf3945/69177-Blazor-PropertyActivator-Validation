@@ -1,0 +1,34 @@
+using PropertyActivatorServer.Components;
+using PropertyActivatorServer.Components.PropertyActivatorValidation;
+using Microsoft.AspNetCore.Components;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddScoped(_ => new ActivationProbeService("di-default", "di:ordinary"));
+builder.Services.AddKeyedScoped<ActivationProbeService>(
+    ValidationConstants.KeyedServiceKey,
+    static (_, key) => new ActivationProbeService("di-default", "di:keyed", key?.ToString()));
+builder.Services.AddScoped<ValidationStateStore>();
+builder.Services.AddScoped<ActivationLogStore>();
+builder.Services.AddScoped<IComponentPropertyActivator, ValidationComponentPropertyActivator>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+app.UseHttpsRedirection();
+
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+app.Run();

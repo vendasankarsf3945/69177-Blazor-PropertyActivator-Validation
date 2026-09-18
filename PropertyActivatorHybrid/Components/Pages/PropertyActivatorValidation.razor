@@ -1,0 +1,65 @@
+@page "/property-activator-validation"
+@inherits PropertyActivatorValidationBase
+
+<h1>Property Activator Validation</h1>
+
+<p>This page validates ordinary, keyed, inherited, and non-public [Inject] properties.</p>
+
+<div class="table-responsive">
+    <table class="table table-sm table-striped">
+        <thead>
+            <tr>
+                <th>Case</th>
+                <th>Source</th>
+                <th>Value</th>
+                <th>Key</th>
+                <th>InstanceId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ordinary</td>
+                <td>@OrdinaryProbe.Source</td>
+                <td>@OrdinaryProbe.Value</td>
+                <td>@(OrdinaryProbe.Key ?? "-")</td>
+                <td>@OrdinaryProbe.InstanceId</td>
+            </tr>
+            <tr>
+                <td>Keyed</td>
+                <td>@KeyedProbe.Source</td>
+                <td>@KeyedProbe.Value</td>
+                <td>@(KeyedProbe.Key ?? "-")</td>
+                <td>@KeyedProbe.InstanceId</td>
+            </tr>
+            <tr>
+                <td>Inherited</td>
+                <td>@InheritedProbe.Source</td>
+                <td>@InheritedProbe.Value</td>
+                <td>@(InheritedProbe.Key ?? "-")</td>
+                <td>@InheritedProbe.InstanceId</td>
+            </tr>
+            <tr>
+                <td>Non-public</td>
+                <td>@NonPublicProbeDisplay.Source</td>
+                <td>@NonPublicProbeDisplay.Value</td>
+                <td>@(NonPublicProbeDisplay.Key ?? "-")</td>
+                <td>@NonPublicProbeDisplay.InstanceId</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<section class="mt-3">
+    <p>Scoped state count: @StateStore.Count</p>
+    <button class="btn btn-primary btn-sm" @onclick="StateStore.Increment">Increment state</button>
+</section>
+
+<NoInjectionProbe />
+
+<h2 class="h5 mt-4">Activation log</h2>
+<ul>
+    @foreach (var entry in LogStore.Entries)
+    {
+        <li>@entry.Activator :: @entry.Component :: @entry.Property :: @entry.Value @(entry.Key is null ? string.Empty : $"(key={entry.Key})")</li>
+    }
+</ul>

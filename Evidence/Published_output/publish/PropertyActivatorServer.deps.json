@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v11.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v11.0": {
+      "PropertyActivatorServer/1.0.0": {
+        "runtime": {
+          "PropertyActivatorServer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PropertyActivatorServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6CAC855-04BD-48E3-AB37-FAF3C303CC99}|PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.csproj|d:\\dotnet-sample\\69177-blazor-propertyactivator-validation\\propertyactivatorhostedwasm\\propertyactivatorhostedwasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6CAC855-04BD-48E3-AB37-FAF3C303CC99}|PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.csproj|solutionrelative:propertyactivatorhostedwasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F23EBBF6-E9F0-49FD-A93E-8C15889ABB42}|PropertyActivatorHostedWasm.Client\\PropertyActivatorHostedWasm.Client.csproj|d:\\dotnet-sample\\69177-blazor-propertyactivator-validation\\propertyactivatorhostedwasm\\propertyactivatorhostedwasm.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F23EBBF6-E9F0-49FD-A93E-8C15889ABB42}|PropertyActivatorHostedWasm.Client\\PropertyActivatorHostedWasm.Client.csproj|solutionrelative:propertyactivatorhostedwasm.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6CAC855-04BD-48E3-AB37-FAF3C303CC99}|PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.csproj|d:\\dotnet-sample\\69177-blazor-propertyactivator-validation\\propertyactivatorhostedwasm\\propertyactivatorhostedwasm\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B6CAC855-04BD-48E3-AB37-FAF3C303CC99}|PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.csproj|solutionrelative:propertyactivatorhostedwasm\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.Client\\Program.cs",
+              "RelativeDocumentMoniker": "PropertyActivatorHostedWasm.Client\\Program.cs",
+              "ToolTip": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm.Client\\Program.cs",
+              "RelativeToolTip": "PropertyActivatorHostedWasm.Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T09:42:49.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm\\Program.cs",
+              "RelativeDocumentMoniker": "PropertyActivatorHostedWasm\\Program.cs",
+              "ToolTip": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm\\Program.cs",
+              "RelativeToolTip": "PropertyActivatorHostedWasm\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T09:38:18.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Error.razor",
+              "DocumentMoniker": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "PropertyActivatorHostedWasm\\Components\\Pages\\Error.razor",
+              "ToolTip": "D:\\DotNet-Sample\\69177-Blazor-PropertyActivator-Validation\\PropertyActivatorHostedWasm\\PropertyActivatorHostedWasm\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "PropertyActivatorHostedWasm\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-17T06:46:07.62Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

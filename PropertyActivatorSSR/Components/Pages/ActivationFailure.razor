@@ -1,0 +1,18 @@
+@page "/activation-failure"
+
+<PageTitle>Activation Failure</PageTitle>
+
+<h1>Activation Failure</h1>
+
+<p>This page intentionally triggers activation failure for one component.</p>
+
+<ErrorBoundary>
+    <ChildContent>
+        <ActivationFailureProbe />
+    </ChildContent>
+    <ErrorContent Context="error">
+        <div class="alert alert-danger">
+            Expected activation failure captured: @error.Message
+        </div>
+    </ErrorContent>
+</ErrorBoundary>
