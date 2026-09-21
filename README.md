@@ -8,8 +8,6 @@ This repository validates custom `IComponentPropertyActivator` behavior across s
 - Hosted Interactive WebAssembly
 - .NET MAUI Windows
 
-Related review notes live in [ReviewConcerns.md](./ReviewConcerns.md).
-
 ## Repository layout
 
 - [PropertyActivatorServer](./PropertyActivatorServer)
@@ -62,14 +60,6 @@ You can override this default per command using `-p:PropertyActivatorVariant=<Bo
 Run these commands from the repository root.
 
 If you want client-only behavior, either use the explicit `ClientOnly` command below or run without `-p:PropertyActivatorVariant` (because the default is `ClientOnly`).
-
-> If your current directory is already `.\PropertyActivatorHostedWasm`, remove the extra `PropertyActivatorHostedWasm\` segment from `--project`.
->
-> Example inside `.\PropertyActivatorHostedWasm`:
->
-> ```powershell
-> dotnet run --project .\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj -p:PropertyActivatorVariant=Both
-> ```
 
 ### Full
 
