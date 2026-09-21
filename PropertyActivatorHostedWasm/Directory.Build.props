@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <PropertyActivatorVariant Condition="'$(PropertyActivatorVariant)' == ''">ClientOnly</PropertyActivatorVariant>
+    <EnableServerCustomActivator>false</EnableServerCustomActivator>
+    <EnableClientCustomActivator>false</EnableClientCustomActivator>
+    <EnableServerCustomActivator Condition="'$(PropertyActivatorVariant)' == 'Both' Or '$(PropertyActivatorVariant)' == 'ServerOnly'">true</EnableServerCustomActivator>
+    <EnableClientCustomActivator Condition="'$(PropertyActivatorVariant)' == 'Both' Or '$(PropertyActivatorVariant)' == 'ClientOnly'">true</EnableClientCustomActivator>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'PropertyActivatorHostedWasm' and '$(EnableServerCustomActivator)' == 'true'">
+    <DefineConstants>$(DefineConstants);PROPERTY_ACTIVATOR_CUSTOM_ENABLED</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'PropertyActivatorHostedWasm.Client' and '$(EnableClientCustomActivator)' == 'true'">
+    <DefineConstants>$(DefineConstants);PROPERTY_ACTIVATOR_CUSTOM_ENABLED</DefineConstants>
+  </PropertyGroup>
+
+  <Target Name="ValidatePropertyActivatorVariant" BeforeTargets="PrepareForBuild">
+    <Error
+      Condition="'$(PropertyActivatorVariant)' != 'Both' and '$(PropertyActivatorVariant)' != 'ServerOnly' and '$(PropertyActivatorVariant)' != 'ClientOnly' and '$(PropertyActivatorVariant)' != 'None'"
+      Text="PropertyActivatorVariant must be one of: Both, ServerOnly, ClientOnly, None." />
+  </Target>
+</Project>
