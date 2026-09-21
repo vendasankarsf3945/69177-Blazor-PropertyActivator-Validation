@@ -29,6 +29,20 @@ public sealed record ActivationLogEntry(
     string? Key,
     string Value);
 
+public sealed record ActivationSnapshot(
+    string Phase,
+    string ActivatorMode,
+    string OrdinaryValue,
+    string KeyedValue,
+    string InheritedValue,
+    string NonPublicValue)
+{
+    public string ToLogLine()
+    {
+        return $"phase={Phase};activator={ActivatorMode};ordinary={OrdinaryValue};keyed={KeyedValue};inherited={InheritedValue};nonPublic={NonPublicValue}";
+    }
+}
+
 public sealed class ActivationLogStore
 {
     private readonly List<ActivationLogEntry> _entries = [];

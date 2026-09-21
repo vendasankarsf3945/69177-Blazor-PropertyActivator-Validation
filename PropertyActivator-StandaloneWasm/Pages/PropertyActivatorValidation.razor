@@ -8,7 +8,7 @@
 <p>This page validates ordinary, keyed, inherited, and non-public [Inject] properties.</p>
 
 <div class="table-responsive">
-    <table class="table table-sm table-striped">
+    <table id="injection-values-table" class="table table-sm table-striped">
         <thead>
             <tr>
                 <th>Case</th>
@@ -59,7 +59,7 @@
 <NoInjectionProbe />
 
 <h2 class="h5 mt-4">Activation log</h2>
-<ul>
+<ul id="activation-log-list">
     @foreach (var entry in LogStore.Entries)
     {
         <li>@entry.Activator :: @entry.Component :: @entry.Property :: @entry.Value @(entry.Key is null ? string.Empty : $"(key={entry.Key})")</li>

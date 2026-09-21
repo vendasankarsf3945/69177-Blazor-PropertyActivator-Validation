@@ -6,9 +6,10 @@
 <h1>Property Activator Validation</h1>
 
 <p>This page validates ordinary, keyed, inherited, and non-public [Inject] properties.</p>
+<p><strong>Runtime phase:</strong> @(IsClientInteractive ? "Client interactive (WebAssembly)" : "Server prerender")</p>
 
 <div class="table-responsive">
-    <table class="table table-sm table-striped">
+    <table id="injection-values-table" class="table table-sm table-striped">
         <thead>
             <tr>
                 <th>Case</th>
@@ -58,8 +59,49 @@
 
 <NoInjectionProbe />
 
+<h2 class="h5 mt-4">Phase-tagged evidence</h2>
+<p>This section captures values by phase so prerender-to-interactive handover is visible in one run.</p>
+<div class="table-responsive">
+    <table id="phase-evidence-table" class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Phase</th>
+                <th>Activator</th>
+                <th>Ordinary</th>
+                <th>Keyed</th>
+                <th>Inherited</th>
+                <th>Non-public</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (PrerenderSnapshot is not null)
+            {
+                <tr>
+                    <td>@PrerenderSnapshot.Phase</td>
+                    <td>@PrerenderSnapshot.ActivatorMode</td>
+                    <td>@PrerenderSnapshot.OrdinaryValue</td>
+                    <td>@PrerenderSnapshot.KeyedValue</td>
+                    <td>@PrerenderSnapshot.InheritedValue</td>
+                    <td>@PrerenderSnapshot.NonPublicValue</td>
+                </tr>
+            }
+            @if (CurrentSnapshot is not null)
+            {
+                <tr>
+                    <td>@CurrentSnapshot.Phase</td>
+                    <td>@CurrentSnapshot.ActivatorMode</td>
+                    <td>@CurrentSnapshot.OrdinaryValue</td>
+                    <td>@CurrentSnapshot.KeyedValue</td>
+                    <td>@CurrentSnapshot.InheritedValue</td>
+                    <td>@CurrentSnapshot.NonPublicValue</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 <h2 class="h5 mt-4">Activation log</h2>
-<ul>
+<ul id="activation-log-list">
     @foreach (var entry in LogStore.Entries)
     {
         <li>@entry.Activator :: @entry.Component :: @entry.Property :: @entry.Value @(entry.Key is null ? string.Empty : $"(key={entry.Key})")</li>
