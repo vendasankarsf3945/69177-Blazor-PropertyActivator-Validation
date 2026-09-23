@@ -15,6 +15,8 @@ builder.Services.AddKeyedScoped<ActivationProbeService>(
 	static (_, key) => new ActivationProbeService("di-default", "di:keyed", key?.ToString()));
 builder.Services.AddScoped<ValidationStateStore>();
 builder.Services.AddScoped<ActivationLogStore>();
+#if PROPERTY_ACTIVATOR_CUSTOM_ENABLED
 builder.Services.AddScoped<IComponentPropertyActivator, ValidationComponentPropertyActivator>();
+#endif
 
 await builder.Build().RunAsync();

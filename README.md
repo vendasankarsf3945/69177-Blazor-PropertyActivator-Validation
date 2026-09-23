@@ -55,6 +55,29 @@ The hosted project uses conditional MSBuild logic to interpret `PropertyActivato
 
 You can override this default per command using `-p:PropertyActivatorVariant=<Both|ServerOnly|ClientOnly|None>`.
 
+## Default-injection toggle for the other hosts
+
+The SSR, Interactive Server, Standalone WebAssembly, and .NET MAUI samples now expose a build-time toggle for the custom activator.
+This lets you reproduce the default-injection screenshots without editing source files by hand.
+
+### Config property
+
+- `EnableCustomActivator` defaults to `true`
+- set `-p:EnableCustomActivator=false` to capture the default-injection behavior
+
+The affected projects are:
+
+- [PropertyActivatorServer/PropertyActivatorServer.csproj](./PropertyActivatorServer/PropertyActivatorServer.csproj)
+- [PropertyActivatorSSR/PropertyActivatorSSR.csproj](./PropertyActivatorSSR/PropertyActivatorSSR.csproj)
+- [PropertyActivator-StandaloneWasm/PropertyActivator-StandaloneWasm.csproj](./PropertyActivator-StandaloneWasm/PropertyActivator-StandaloneWasm.csproj)
+- [PropertyActivatorHybrid/PropertyActivatorHybrid.csproj](./PropertyActivatorHybrid/PropertyActivatorHybrid.csproj)
+
+Example:
+
+```powershell
+dotnet run --project .\PropertyActivatorServer\PropertyActivatorServer.csproj -p:EnableCustomActivator=false
+```
+
 ## Running the hosted WebAssembly variants
 
 Run these commands from the repository root.

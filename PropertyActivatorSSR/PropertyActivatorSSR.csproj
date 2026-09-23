@@ -5,6 +5,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    <EnableCustomActivator>true</EnableCustomActivator>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(EnableCustomActivator)' == 'true'">
+    <DefineConstants>$(DefineConstants);PROPERTY_ACTIVATOR_CUSTOM_ENABLED</DefineConstants>
   </PropertyGroup>
 
 </Project>

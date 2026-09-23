@@ -1,6 +1,7 @@
-COMMAND: dotnet build .\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj -c Release -p:PropertyActivatorVariant=ClientOnly
+﻿COMMAND: dotnet build .\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj -c Release -p:PropertyActivatorVariant=ClientOnly
 WORKDIR: D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation
-SHA: 029713819af9363ebfa17ed671b8ae8239f4a6c9
+SHA: 39e7ad777a75dc5106e9bfe914d42edcbea56278
+CAPTURED_AT: 2026-09-23T15:02:15+05:30
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -13,4 +14,4 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:06.34
+Time Elapsed 00:00:06.11

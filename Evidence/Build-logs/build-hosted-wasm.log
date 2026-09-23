@@ -1,0 +1,36 @@
+﻿COMMAND: dotnet build .\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj -c Release
+WORKDIR: D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation
+SHA: 39e7ad777a75dc5106e9bfe914d42edcbea56278
+CAPTURED_AT: 2026-09-23T15:02:15+05:30
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\Program Files\dotnet\sdk\11.0.100-rc.1.26425.128\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: You are using a preview version of .NET. See: https://aka.ms/dotnet-support-policy [D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj]
+  PropertyActivatorHostedWasm.Client -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.Client\bin\Release\net11.0\PropertyActivatorHostedWasm.Client.dll
+  PropertyActivatorHostedWasm.Client (Blazor output) -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.Client\bin\Release\net11.0\wwwroot
+  PropertyActivatorHostedWasm -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\bin\Release\net11.0\PropertyActivatorHostedWasm.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:19.65
+
+COMMAND: dotnet build .\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj -c Release -p:EnableCustomActivator=false
+WORKDIR: D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation
+SHA: 39e7ad777a75dc5106e9bfe914d42edcbea56278
+CAPTURED_AT: 2026-09-23T15:05:48+05:30
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\Program Files\dotnet\sdk\11.0.100-rc.1.26425.128\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(385,5): message NETSDK1057: You are using a preview version of .NET. See: https://aka.ms/dotnet-support-policy [D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.csproj]
+  PropertyActivatorHostedWasm.Client -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.Client\bin\Release\net11.0\PropertyActivatorHostedWasm.Client.dll
+  PropertyActivatorHostedWasm.Client (Blazor output) -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm.Client\bin\Release\net11.0\wwwroot
+  PropertyActivatorHostedWasm -> D:\DotNet-Sample\69177-Blazor-PropertyActivator-Validation\PropertyActivatorHostedWasm\PropertyActivatorHostedWasm\bin\Release\net11.0\PropertyActivatorHostedWasm.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.35
+

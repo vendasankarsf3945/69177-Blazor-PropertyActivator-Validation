@@ -6,6 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
     <StaticWebAssetSpaFallbackEnabled>true</StaticWebAssetSpaFallbackEnabled>
+    <EnableCustomActivator>true</EnableCustomActivator>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(EnableCustomActivator)' == 'true'">
+    <DefineConstants>$(DefineConstants);PROPERTY_ACTIVATOR_CUSTOM_ENABLED</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
